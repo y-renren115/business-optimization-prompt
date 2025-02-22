@@ -8,7 +8,7 @@ git remote add upstream https://github.com/dahatake/GenerativeAI-Prompt-Sample-J
 - 2. 既に追加済みか確認する場合は以下のコマンドを実行します。
 
 ```cmd
-git remote add upstream https://github.com/オリジナルユーザー/オリジナルリポジトリ.git
+git remote add upstream https://github.com/dahatake/GenerativeAI-Prompt-Sample-Japanese.git
 ```
 
 - 3. 最新のアップストリーム情報の取得
