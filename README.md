@@ -1,3 +1,58 @@
+# オリジナルリポジトリの差分取り込み手順（business-optimization-prompt）
+- 1. フォークしたリポジトリのローカルコピーにオリジナルのリポジトリを「upstream」として登録します。
+
+```cmd
+git remote add upstream https://github.com/dahatake/GenerativeAI-Prompt-Sample-Japanese.git
+```
+
+- 2. 既に追加済みか確認する場合は以下のコマンドを実行します。
+
+```cmd
+git remote add upstream https://github.com/オリジナルユーザー/オリジナルリポジトリ.git
+```
+
+- 3. 最新のアップストリーム情報の取得
+
+```cmd
+git fetch upstream
+```
+
+- 4. 自分の作業ブランチへの統合
+
+```cmd
+git checkout main
+```
+
+- 5. 自分の作業ブランチへの統合
+- アップストリームの最新状態を自分のブランチにマージします。
+
+```cmd
+git merge upstream/main
+```
+
+- リベースを使う場合
+- 自分のコミットをアップストリームの最新変更の上に乗せ直すことで履歴を線形化します。
+
+```cmd
+
+git rebase upstream/main
+
+# リベース中にコンフリクトが発生した場合は、指示に従って解決し、
+git rebase --continue
+
+# リベース後、変更を自分のフォークに反映するために場合によっては強制プッシュが必要になる場合があります。
+```
+
+- 6. フォークへの反映
+- 統合した変更を自分のGitHub上のフォークにアップロードします。
+
+```cmd
+git push origin main
+
+# リベースを使用した場合は、リモート履歴との整合性を取るために以下のように強制プッシュが必要な場合があります
+git push origin main --force
+```
+
 # GenerativeAI-Prompt-Sample-Japanese
 GenerativeAI の Prompt のサンプルです。
 
