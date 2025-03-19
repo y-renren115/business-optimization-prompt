@@ -12,7 +12,7 @@
 
 無し。
 
-# Function
+# Function / Tools
 
 - Code Interpreter
 
